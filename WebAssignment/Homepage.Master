@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Homepage.master.cs" Inherits="Assignment.Homepage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="Stylesheets" runat="server">
+        <link rel="stylesheet" href="/Homepage.css" type="text/css" />
+    </asp:ContentPlaceHolder>
+    <script src="ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src='<%= ResolveClientUrl("~/JavaScript/jsScript.js") %>'></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <nav>
+                <ul>
+                    <li style="float: left;"><a href="#">
+                        <img src="/Image/g6white.png" style="height: 50px;" /></a></li>
+                    <li>
+                        <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" />
+                    </li>
+                    <li><a href="#" class="navMenu">Contact</a></li>
+                    <li class="dropdown"><a href="javascript:void(0)" class="navMenu" id="dropdownMenu">Assessment</a>
+                        <div class="dropdown-content">
+                            <a>Create an Assessment</a>
+                            <a href="/Lecturer/CreateQ.aspx">Create Multiple Choices Assessment</a>
+                            <a href="/Lecturer/CreateWritten.aspx">Create Essay or Written Assessment</a>
+                        </div>
+                    </li>
+                    <li><a href="/HomepageAnon.aspx" class="navMenu">Home</a></li>
+                    <li id="loginName" runat="server"><a href="/User/Profile.aspx" class="navMenu">
+                        <asp:Label ID="lblLoggedUser" runat="server" Text=""></asp:Label>
+                    </a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+
+        <div class="contentWrapper">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+        <footer style="padding: 20px 80px 20px 80px;">
+            <div style="float: left; width: 40%;">
+                <a href="HomepageAnon.aspx" style="font-size: large;"><strong>Home</strong></a><br />
+                <a href="#">Guideline for Lecturer</a><br />
+                <a href="#">Guideline for Student</a><br />
+                <a href="#">Features</a><br />
+                <a href="FAQ.aspx">FAQ</a><br />
+                <a href="#">Contact Us</a>
+            </div>
+
+            <div style="float: left; width: 30%;">
+                <span style="font-size: large;"><strong>Assessment</strong></span><br />
+                <a href="#">Courses</a><br />
+                <a href="#">Multiple Choice assessment</a><br />
+                <a href="#">Essay or Written assessment</a>
+            </div>
+
+            <div style="float: left; text-align: center;">
+                <img src="/Image/g6white.png" style="height: 120px;" />
+            </div>
+
+            <div style="font-size: smaller; width: 95%; padding-top: 150px; text-align: right;">
+                | Wong Wei Yao, Wong Yueh Ping, Yap Sui Ming, Yeap Lee Zhi BAIT2113 2018
+            </div>
+        </footer>
+
+    </form>
+</body>
+</html>

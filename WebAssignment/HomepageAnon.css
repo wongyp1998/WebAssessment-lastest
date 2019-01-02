@@ -1,0 +1,32 @@
+﻿#registerTiles{
+    font-size:large;
+    text-align:center;
+}
+
+.homeRegister{
+    display:inline-block;
+    width:20%;
+    padding:20px;
+    background-color:rgba(255,255,255,0.3);
+}
+
+.btnHomeRegister{
+    border-radius:10px;
+    font-size:18px;
+    background-color:mediumseagreen;
+    padding:10px;
+    color:white;
+}
+
+#guidelinesContainer {
+    text-align: center;
+    background-color: transparent;
+}
+
+.guidelines {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 5px 8px 6px #1a62ff;
+}
+

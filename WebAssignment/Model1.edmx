@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="tarucModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="question">
+          <Key>
+            <PropertyRef Name="qid" />
+          </Key>
+          <Property Name="qid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="quiz_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="qdesc" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="opt1" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="opt2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="opt3" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="opt4" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ans" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="tarucModelStoreContainer">
+          <EntitySet Name="question" EntityType="Self.question" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="tarucModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="question">
+          <Key>
+            <PropertyRef Name="qid" />
+          </Key>
+          <Property Name="qid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="quiz_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="qdesc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="opt1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="opt2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="opt3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="opt4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ans" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="tarucEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="questions" EntityType="Self.question" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="tarucModelStoreContainer" CdmEntityContainer="tarucEntities">
+          <EntitySetMapping Name="questions">
+            <EntityTypeMapping TypeName="tarucModel.question">
+              <MappingFragment StoreEntitySet="question">
+                <ScalarProperty Name="qid" ColumnName="qid" />
+                <ScalarProperty Name="quiz_name" ColumnName="quiz_name" />
+                <ScalarProperty Name="qdesc" ColumnName="qdesc" />
+                <ScalarProperty Name="opt1" ColumnName="opt1" />
+                <ScalarProperty Name="opt2" ColumnName="opt2" />
+                <ScalarProperty Name="opt3" ColumnName="opt3" />
+                <ScalarProperty Name="opt4" ColumnName="opt4" />
+                <ScalarProperty Name="ans" ColumnName="ans" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram DiagramId="ce48c610dd4d496e99a27cb971dac0ff" Name="Diagram1">
+        <EntityTypeShape EntityType="tarucModel.question" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
