@@ -394,11 +394,11 @@
     <Content Include="ckeditor\skins\moono-lisa\images\spinner.gif" />
     <Content Include="ckeditor\styles.js" />
     <Content Include="Lecturer\CreateQ.aspx" />
-    <Content Include="Lecturer\CreateWritten.aspx" />
     <Content Include="FAQ.aspx" />
     <Content Include="Homepage.css" />
     <Content Include="HomepageAnon.aspx" />
     <Content Include="HomepageAnon.css" />
+    <Content Include="Lecturer\Written.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -410,11 +410,14 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="SelectWritten.aspx" />
     <Content Include="ShowQuiz.aspx" />
+    <Content Include="ShowWritten.aspx" />
     <Content Include="User\Profile.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="SelectQuiz.aspx" />
     <Content Include="viewQuestion.aspx" />
+    <Content Include="viewWritten.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -426,13 +429,6 @@
     </Compile>
     <Compile Include="Lecturer\CreateQ.aspx.designer.cs">
       <DependentUpon>CreateQ.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Lecturer\CreateWritten.aspx.cs">
-      <DependentUpon>CreateWritten.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Lecturer\CreateWritten.aspx.designer.cs">
-      <DependentUpon>CreateWritten.aspx</DependentUpon>
     </Compile>
     <Compile Include="FAQ.aspx.cs">
       <DependentUpon>FAQ.aspx</DependentUpon>
@@ -454,6 +450,13 @@
     </Compile>
     <Compile Include="HomepageAnon.aspx.designer.cs">
       <DependentUpon>HomepageAnon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer\Written.aspx.cs">
+      <DependentUpon>Written.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lecturer\Written.aspx.designer.cs">
+      <DependentUpon>Written.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -477,12 +480,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="SelectWritten.aspx.cs">
+      <DependentUpon>SelectWritten.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SelectWritten.aspx.designer.cs">
+      <DependentUpon>SelectWritten.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ShowQuiz.aspx.cs">
       <DependentUpon>ShowQuiz.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ShowQuiz.aspx.designer.cs">
       <DependentUpon>ShowQuiz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowWritten.aspx.cs">
+      <DependentUpon>ShowWritten.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowWritten.aspx.designer.cs">
+      <DependentUpon>ShowWritten.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
@@ -515,6 +532,13 @@
     </Compile>
     <Compile Include="viewQuestion.aspx.designer.cs">
       <DependentUpon>viewQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewWritten.aspx.cs">
+      <DependentUpon>viewWritten.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewWritten.aspx.designer.cs">
+      <DependentUpon>viewWritten.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

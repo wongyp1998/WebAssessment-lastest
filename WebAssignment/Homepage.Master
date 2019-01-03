@@ -26,7 +26,7 @@
                         <div class="dropdown-content">
                             <a>Create an Assessment</a>
                             <a href="/Lecturer/CreateQ.aspx">Create Multiple Choices Assessment</a>
-                            <a href="/Lecturer/CreateWritten.aspx">Create Essay or Written Assessment</a>
+                            <a href="/Lecturer/Written.aspx">Create Essay or Written Assessment</a>
                         </div>
                     </li>
                     <li><a href="/HomepageAnon.aspx" class="navMenu">Home</a></li>

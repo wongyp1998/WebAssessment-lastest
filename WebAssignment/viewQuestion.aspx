@@ -95,11 +95,14 @@
                 <br />
 
                 <div>
-                <asp:GridView class="grid" runat="server" AutoGenerateColumns="False" DataKeyNames="qid" DataSourceID="SqlDataSource2" HorizontalAlign="Center" AllowPaging="True" Font-Bold="True" Font-Names="Avenir LT Std">
+                <asp:GridView class="grid" runat="server" AutoGenerateColumns="False" DataKeyNames="qid" DataSourceID="SqlDataSource2" HorizontalAlign="Center" AllowPaging="True" Font-Bold="True" Font-Names="Avenir LT Std" CellPadding="4" ForeColor="#333333" GridLines="None">
+                    <AlternatingRowStyle BackColor="White" />
                     <Columns>
-                        <asp:BoundField DataField="qid" HeaderText="ID" InsertVisible="false" SortExpression="qid" ReadOnly="True" ItemStyle-Width="5px" />
+                        <asp:BoundField DataField="qid" HeaderText="ID" InsertVisible="false" SortExpression="qid" ReadOnly="True" ItemStyle-Width="5px" >
+<ItemStyle Width="5px"></ItemStyle>
+                        </asp:BoundField>
 <%--                        <asp:BoundField DataField="qdesc" HeaderText="Description" SortExpression="qdesc" ItemStyle-Width="270px" ItemStyle-Wrap="true" ItemStyle-CssClass="grdSearchResultbreakword" ControlStyle-Width="250px" />--%>
-                        <asp:TemplateField HeaderText="Description" SortExpression="qdesc">
+                        <asp:TemplateField HeaderText="Description" SortExpression="qdesc" ItemStyle-CssClass="grdSearchResultbreakword" ControlStyle-Width="200px" >
                             <ItemTemplate>
                                 <asp:Label runat="server" ID="Desc" Text ='<%# Bind("qdesc") %>' ></asp:Label>
                             </ItemTemplate>
@@ -107,14 +110,47 @@
                                 <asp:TextBox CssClass="auto-style3" runat="server" ID="Desc1" TextMode="MultiLine" Rows="5" Text='<%# Bind("qdesc") %>'></asp:TextBox>
                             </EditItemTemplate>
                         </asp:TemplateField>
-                        <asp:BoundField DataField="opt1" HeaderText="Option 1" SortExpression="opt1" ItemStyle-Width="80px" ItemStyle-Wrap="true" ItemStyle-CssClass="grdSearchResultbreakword" ControlStyle-Width="90px"/>
-                        <asp:BoundField DataField="opt2" HeaderText="Option 2" SortExpression="opt2" ItemStyle-Width="80px" ItemStyle-Wrap="true" ItemStyle-CssClass="grdSearchResultbreakword" ControlStyle-Width="90px" />
-                        <asp:BoundField DataField="opt3" HeaderText="Option 3" SortExpression="opt3" ItemStyle-Width="80px"  ItemStyle-Wrap="true" ItemStyle-CssClass="grdSearchResultbreakword" ControlStyle-Width="90px"/> 
-                        <asp:BoundField DataField="opt4" HeaderText="Option 4" SortExpression="opt4" ItemStyle-Width="80px" ItemStyle-Wrap="true" ItemStyle-CssClass="grdSearchResultbreakword" ControlStyle-Width="90px"/>
-                        <asp:BoundField DataField="ans" HeaderText="Correct Answer" SortExpression="ans" ItemStyle-Width="5px" ControlStyle-Width="30px"  />
-                        <asp:CommandField HeaderText="Action" ShowEditButton="true" ShowDeleteButton="true" ItemStyle-Width="5px"  />
+                        <asp:BoundField DataField="opt1" HeaderText="Option 1" SortExpression="opt1" ItemStyle-Width="80px" ItemStyle-Wrap="true" ItemStyle-CssClass="grdSearchResultbreakword" ControlStyle-Width="90px">
+<ControlStyle Width="90px"></ControlStyle>
+
+<ItemStyle Wrap="True" CssClass="grdSearchResultbreakword" Width="80px"></ItemStyle>
+                        </asp:BoundField>
+                        <asp:BoundField DataField="opt2" HeaderText="Option 2" SortExpression="opt2" ItemStyle-Width="80px" ItemStyle-Wrap="true" ItemStyle-CssClass="grdSearchResultbreakword" ControlStyle-Width="90px" >
+<ControlStyle Width="90px"></ControlStyle>
+
+<ItemStyle Wrap="True" CssClass="grdSearchResultbreakword" Width="80px"></ItemStyle>
+                        </asp:BoundField>
+                        <asp:BoundField DataField="opt3" HeaderText="Option 3" SortExpression="opt3" ItemStyle-Width="80px"  ItemStyle-Wrap="true" ItemStyle-CssClass="grdSearchResultbreakword" ControlStyle-Width="90px"> 
+<ControlStyle Width="90px"></ControlStyle>
+
+<ItemStyle Wrap="True" CssClass="grdSearchResultbreakword" Width="80px"></ItemStyle>
+                        </asp:BoundField>
+                        <asp:BoundField DataField="opt4" HeaderText="Option 4" SortExpression="opt4" ItemStyle-Width="80px" ItemStyle-Wrap="true" ItemStyle-CssClass="grdSearchResultbreakword" ControlStyle-Width="90px">
+<ControlStyle Width="90px"></ControlStyle>
+
+<ItemStyle Wrap="True" CssClass="grdSearchResultbreakword" Width="80px"></ItemStyle>
+                        </asp:BoundField>
+                        <asp:BoundField DataField="ans" HeaderText="Correct Answer" SortExpression="ans" ItemStyle-Width="5px" ControlStyle-Width="30px"  >
+<ControlStyle Width="30px"></ControlStyle>
+
+<ItemStyle Width="5px"></ItemStyle>
+                        </asp:BoundField>
+                        <asp:CommandField HeaderText="Action" ShowEditButton="true" ShowDeleteButton="true" ItemStyle-Width="5px"  >
+                      
+<ItemStyle Width="5px"></ItemStyle>
+                        </asp:CommandField>
                       
                     </Columns>
+                    <EditRowStyle BackColor="#2461BF" />
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
                 </div>
             </div>

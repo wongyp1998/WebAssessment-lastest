@@ -63,5 +63,10 @@ namespace WebAssignment
             DropDownList dropdown = (DropDownList)fvQuestion.FindControl("quizlist");
             btn.Text = dropdown.SelectedValue;
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
